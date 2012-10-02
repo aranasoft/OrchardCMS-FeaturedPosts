@@ -1,0 +1,20 @@
+﻿@model Arana.FeaturedPosts.Settings.BlogPostPickerFieldSettings
+
+<fieldset>
+    <div>
+        @Html.CheckBoxFor(m => m.Required) <label for="@Html.FieldIdFor(m => m.Required)" class="forcheckbox">@T( "A blog post is required" )</label>
+        <span class="hint">@T("Check to ensure the user is providing at least one blog post.")</span>
+    </div>
+</fieldset>
+<fieldset>
+    <div>
+        @Html.CheckBoxFor(m => m.Multiple) <label for="@Html.FieldIdFor(m => m.Multiple)" class="forcheckbox">@T( "Allow multiple blog posts" )</label>
+        <span class="hint">@T( "Check to ensure the allow the user to select multiple blog post." )</span>
+    </div>
+</fieldset>
+<fieldset>
+    <label for="@Html.FieldIdFor(m => m.Hint)">@T("Help text")</label>
+    @Html.TextAreaFor(m => m.Hint, new { @class = "textMedium", rows = "5" } )
+    <span class="hint">@T( "The help text is written under the field when authors are selecting blog posts." )</span>
+    @Html.ValidationMessageFor(m => m.Hint)
+</fieldset>

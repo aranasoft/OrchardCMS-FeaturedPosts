@@ -1,0 +1,15 @@
+﻿Name: Featured Posts
+AntiForgery: enabled
+Author: Arana Software, Jay Harris
+Website: https://github.com/aranasoft/OrchardCMS-FeaturedPosts
+Version: 1.0
+OrchardVersion: 1.5
+Description: UI and Menu Management for attaching Blog Posts to other content and navigation menus.
+Dependencies: Arana.BlogPostPicker, Title, Navigation
+Category: Navigation
+Features:
+    Arana.BlogPostPicker:
+        Name: Blog Post Picker
+        Description: UI for selecting Blog Posts. Largely based on Content Picker.
+        Dependencies: Contents, Orchard.Blogs
+        Category: Input Editor
