@@ -1,0 +1,31 @@
+﻿@using Orchard.Core.Contents.ViewModels;
+@{
+    var typeDisplayName = Model.TypeDisplayName;
+    var pageTitle = T("Recent Blog Post");
+
+    if (!string.IsNullOrWhiteSpace(typeDisplayName)) {
+		pageTitle = T( "Manage {0} Blog Post", typeDisplayName );
+    }
+
+    Layout.Title = pageTitle;
+}
+
+<div class="manage">
+</div>
+
+@using (Html.BeginFormAntiForgeryPost()) {
+    <fieldset class="bulk-actions">
+        <label for="orderResults" class="bulk-order">@T("Ordered by")</label>
+        <select id="orderResults" name="Options.OrderBy">
+            @Html.SelectOption((ContentsOrder)Model.Options.OrderBy, ContentsOrder.Created, T("recently created").ToString())
+            @Html.SelectOption((ContentsOrder)Model.Options.OrderBy, ContentsOrder.Modified, T("recently modified").ToString())
+            @Html.SelectOption((ContentsOrder)Model.Options.OrderBy, ContentsOrder.Published, T("recently published").ToString())
+        </select>
+        <button type="submit" name="submit.Filter" value="yes please">@T("Apply")</button>
+    </fieldset>
+    <fieldset class="contentItems bulk-items">
+@Display(Model.ContentItems)
+    </fieldset>
+@Display(Model.Pager)
+}
+

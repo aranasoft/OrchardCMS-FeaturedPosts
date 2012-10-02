@@ -1,0 +1,23 @@
+﻿@using Arana.FeaturedPosts.Fields
+@using Orchard.Utility.Extensions;
+
+@{
+    var field = (BlogPostPickerField) Model.ContentField;
+    string name = field.DisplayName;
+    var contentItems = field.ContentItems;
+}
+<p class="blog-post-picker-field blog-post-picker-field-@name.HtmlClassify()">
+    <span class="name">@name:</span>
+    @if(contentItems.Any()) {
+        foreach(var contentItem in contentItems) {
+            <span class="value">@Html.ItemDisplayLink(contentItem)</span>
+            if(contentItem != contentItems.Last()) {
+                <span>,</span>
+            }
+        }
+    }
+    else {
+        <span class="value">@T("No blog posts.")</span>
+	}
+</p>
+
