@@ -2,8 +2,8 @@
 AntiForgery: enabled
 Author: Arana Software, Jay Harris
 Website: https://github.com/aranasoft/OrchardCMS-FeaturedPosts
-Version: 1.0
-OrchardVersion: 1.5
+Version: 1.1
+OrchardVersion: 1.7
 Description: UI and Menu Management for attaching Blog Posts to other content and navigation menus.
 Dependencies: Arana.BlogPostPicker, Title, Navigation
 Category: Navigation

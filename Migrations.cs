@@ -4,7 +4,7 @@ using Orchard.Data.Migration;
 namespace Arana.FeaturedPosts {
     public class Migrations : DataMigrationImpl {
         public int Create() {
-			SchemaBuilder.CreateTable( "BlogPostMenuItemPartRecord",
+            SchemaBuilder.CreateTable("BlogPostMenuItemPartRecord",
                 table => table
                     .ContentPartRecord()
                     .Column<int>("BlogPostMenuItemRecord_id")
@@ -23,10 +23,10 @@ namespace Arana.FeaturedPosts {
             return 1;
         }
 
-		public void Uninstall( ) {
-			ContentDefinitionManager.DeleteTypeDefinition( "BlogPostMenuItem" );
-			ContentDefinitionManager.DeletePartDefinition( "BlogPostMenuItemPart" );
-			SchemaBuilder.DropTable( "BlogPostMenuItemPartRecord" );
+        public void Uninstall() {
+            ContentDefinitionManager.DeleteTypeDefinition("BlogPostMenuItem");
+            ContentDefinitionManager.DeletePartDefinition("BlogPostMenuItemPart");
+            SchemaBuilder.DropTable("BlogPostMenuItemPartRecord");
         }
     }
 }
