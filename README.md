@@ -1,7 +1,8 @@
-Featured Posts Module for Orchard CMS
-===========================
+# orchard-featuredposts
 
-A featured blog posts module for [Orchard CMS](http://orchardproject.net). Includes a Blog Post Picker content part and a Blog Post Menu Item for making Featured Post collections, allowing content authors to directly link to specific blog posts from their content or to create a Featured Posts Menu Widget.
+A Featured Blog Posts Module for [OrchardCMS](http://www.orchardproject.net/) (>=1.7)
+
+Includes a Blog Post Picker content part and a Blog Post Menu Item for making Featured Post collections, allowing content authors to directly link to specific blog posts from their content or to create a Featured Posts Menu Widget.
 
 Blog Post Picker is largely based on Orchard's Content Item Picker. Blog Post Menu Item is largely based on Orchard's Content Menu Item.
 
